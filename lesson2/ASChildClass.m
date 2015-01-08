@@ -14,6 +14,11 @@
 - (NSString*) saySomething{
     NSString* string = @"Something from child class";
     return string;
+    
+}
+
+- (NSString*) sayForSomething{
+        return @"privet!";
 }
 
 @end
