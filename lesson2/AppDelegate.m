@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "ASChildClass.h"
+//#import "ASParentClass.h"
+
 
 @interface AppDelegate ()
 
@@ -17,7 +20,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    ASChildClass *parent = [[ASChildClass alloc]  init];
+    [parent SayHello];
+    [parent Say:(@"Hi from Roman")];
+    [parent Say:(@"hello1") and:(@"hello2")];
+    NSLog(@"%@", [parent saySomething]);
+    
+    [ASChildClass aboutMe];
+    
     return YES;
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
